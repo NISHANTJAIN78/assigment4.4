@@ -1,0 +1,45 @@
+ANS 1: SCREEN SHOTS OF PROGRAM HAS BEEN ATTACHED
+
+
+
+
+
+
+ANS 2:
+
+DFSInputStream : 
+                   
+
+•	Handles communication of the namenodewith various datanodes.
+•   Handles integrity of data contained by the blocks.
+•   Manages data read activity in case of datanodefailure.
+•   Called internally by FSDataInputStream.
+
+
+FSDataInputStream :
+        
+
+Provides stream (channel) for reading data.
+
+
+FSDataInputStream
+Lets the application read from a file
+FSDataInputStreamin = null;
+in = fs.open(new Path(uri));
+
+
+FSDataOutputStream :
+
+Provides stream (channel) for writing data.
+
+OutputStreamout = fs.create(new Path(dst));
+IOUtils.copyBytes(in, out, 4096, true);
+
+
+DFSOutputStream :
+
+•	Handles communication of the namenodewith various datanodes.
+•	Called internally by FSDataOutputStream.
+
+
+	
